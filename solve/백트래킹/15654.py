@@ -8,7 +8,7 @@ comb.sort()
 res = []
 visited=[False]*(max(comb)+1)
 
-def recur(num):
+def recur():
     if len(res) == M:
         print(*res)
         return
@@ -16,9 +16,9 @@ def recur(num):
         if visited[comb[i]]==False:
             visited[comb[i]]=True
             res.append(comb[i])
-            recur(comb[i])
+            recur()
             visited[comb[i]]=False
             res.pop()
 
 
-recur(comb[0])
+recur()
